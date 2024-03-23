@@ -13,7 +13,7 @@
         "url": ""
     },
     "keywords": [],
-    "author": "Aleh Serhiyenia",
+    "author": "Guranda Lemonjava",
     "license": "ISC",
     "homepage": "",
     "devDependencies": {
@@ -37,5 +37,8 @@
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^5.0.0",
         "webpack-merge": "^5.10.0"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5"
     }
 }

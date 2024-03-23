@@ -34,8 +34,18 @@ class Loader {
         return url.slice(0, -1);
     }
 
+    // load(method, endpoint, callback, options = {}) {
+    //     fetch(this.makeUrl(options, endpoint), { method })
+    //         .then(this.errorHandler)
+    //         .then((res) => res.json())
+    //         .then((data) => callback(data))
+    //         .catch((err) => console.error(err));
+    // }
+
     load(method, endpoint, callback, options = {}) {
-        fetch(this.makeUrl(options, endpoint), { method })
+        const url = this.makeUrl(options, endpoint);
+        console.log(`Requesting news for source: ${url}`);
+        fetch(url, { method })
             .then(this.errorHandler)
             .then((res) => res.json())
             .then((data) => callback(data))
