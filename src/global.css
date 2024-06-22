@@ -1,9 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
     color: #fff;
-    background: #17181c;
+    background: #2d1f1f;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
-
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 header {
     padding: 10px 30px;
 }
@@ -14,22 +27,70 @@ header h1 {
 }
 
 footer {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    top: 0;
 }
 footer .copyright {
     font-size: 14px;
-    color: #333;
+    color: #8f8d8d;
     text-align: center;
+    margin-bottom: 10px;
 }
 footer .copyright a {
-    color: #444;
+    color: #4681e8;
+    text-decoration: none;
 }
 footer .copyright a:hover {
-    color: #555;
+    color: #2a5194;
 }
-footer .copyright:before {
+footer .copyright:last-of-type::before {
     content: '©';
+}
+
+.image-container {
+    width: 100px;
+    background-color: #fff;
+    display: block;
+    margin-left: 5px;
+}
+
+footer p {
+    font-size: 28px;
+}
+footer .course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-logo {
+    width: 100px;
+}
+main {
+    background: #433131;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+footer .footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    body {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        padding: 10px;
+    }
 }
